@@ -1,0 +1,8 @@
+body {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(170, 170, 170);
+  font-family: Helvetica, sans-serif;
+}
+.carousel {
+  height: auto;
+}

@@ -13,7 +13,7 @@ const CarouselCard = ({ element, type, handleFavElement }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="card-container card inline bg-dark border border-light">
+    <div className="card-container card inline  border border-light">
       <img
         src={
           type === "planets" && element.uid === "1"
@@ -26,13 +26,13 @@ const CarouselCard = ({ element, type, handleFavElement }) => {
       <div className="card-body">
         <h5 className="card-title">{element.name}</h5>
         <button
-          className="btn bg-dark text-light border border-light"
+          className="btn  text-light border border-light"
           onClick={() => navigate(`/single/${type}/${element.uid}`)}
         >
           Learn more
         </button>
         <button
-          className="btn bg-dark text-light border border-light"
+          className="btn  text-dark border border-light"
           onClick={() => handleFavElement(element, type)}
         >
           <FaRegStar />

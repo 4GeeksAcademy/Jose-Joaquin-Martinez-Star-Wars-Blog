@@ -28,7 +28,10 @@ const Layout = () => {
           <Route path="/single/characters/:uid" element={<SingleCharacter />} />
           <Route path="/single/planets/:uid" element={<SinglePlanet />} />
           <Route path="/single/vehicles/:uid" element={<SingleVehicle />} />
-          <Route path="*" element={<h1>Not found!</h1>} />
+          <Route
+            path="*"
+            element={<h1>The force is not strong enough on YOU!</h1>}
+          />
         </Routes>
         <Footer />
       </BrowserRouter>

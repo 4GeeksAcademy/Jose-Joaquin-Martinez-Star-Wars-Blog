@@ -1,9 +1,36 @@
-nav {
-  position: sticky;
+.navbar {
+  width: 100%;
+  position: fixed;
   display: flex;
   justify-content: space-around;
   align-items: center;
   border: 1px solid white;
   background-color: black;
-  color: rgb(170, 170, 170);
+  z-index: 10;
+  animation: enhancer-navbar linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 200px;
+}
+
+@keyframes enhancer-navbar {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+.btn-fav,
+.dropdown-menu {
+  background-color: black;
+  color: white;
+}
+.btn-fav:hover {
+  background-color: white;
+  color: black;
+  transition: 0.4s;
+}
+
+li {
+  cursor: pointer;
 }

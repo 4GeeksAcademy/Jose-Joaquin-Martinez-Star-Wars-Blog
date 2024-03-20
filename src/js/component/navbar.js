@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 // import style
-/* import "./../../styles/navbar.css"; */
+import "./../../styles/navbar.css";
 
 // import icon
 import { FaRegTrashAlt } from "react-icons/fa";
@@ -19,7 +19,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className=" navbar navbar-dark bg-dark d-flex justify-content-around border-bottom border-light">
+    <nav className=" navbar  d-flex justify-content-around border-bottom border-light">
       <Link to="/">
         <img
           className="navbar-brand mb-0 w-25"
@@ -29,7 +29,7 @@ export const Navbar = () => {
       </Link>
       <div className="dropdown">
         <button
-          className="btn border border-light dropdown-toggle bg-dark text-light"
+          className="btn btn-fav border border-light dropdown-toggle"
           type="button"
           id="dropdownMenuButton1"
           data-bs-toggle="dropdown"
@@ -38,13 +38,13 @@ export const Navbar = () => {
           Favorites
         </button>
         <ul
-          className="dropdown-menu bg-dark"
+          className="dropdown-menu"
           aria-labelledby="dropdownMenuButton1"
           onClick={handleDropdownClick}
         >
-          {store.favItem.map((element, index) => {
+          {store.favItem.map((element) => {
             return (
-              <li className="text-light" key={index}>
+              <li className="text-light" key={element.uid}>
                 <span
                   onClick={() =>
                     navigate(`/single/${element.category}/${element.uid}`)

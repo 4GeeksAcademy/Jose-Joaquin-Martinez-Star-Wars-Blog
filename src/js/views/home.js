@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 import CarouselCard from "./../component/CarouselCard.jsx";
 
 //import styles
-import "./../../styles/home.css";
+import "../../styles/home.css";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
@@ -16,7 +16,7 @@ export const Home = () => {
 
   return (
     <>
-      <div className="carousel d-flex flex-nowrap bg-dark border overflow-auto">
+      <div className="carousel d-flex flex-nowrap  border overflow-auto">
         {store.characters.map((element) => {
           return (
             <CarouselCard
@@ -28,7 +28,7 @@ export const Home = () => {
           );
         })}
       </div>
-      <div className="carousel d-flex flex-nowrap bg-dark border overflow-auto">
+      <div className="carousel d-flex flex-nowrap  border overflow-auto mt-5">
         {store.planets.map((element) => {
           return (
             <CarouselCard
@@ -40,7 +40,7 @@ export const Home = () => {
           );
         })}
       </div>
-      <div className="carousel d-flex flex-nowrap bg-dark border overflow-auto">
+      <div className="carousel d-flex flex-nowrap  border overflow-auto">
         {store.vehicles.map((element) => {
           return (
             <CarouselCard

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
+//import style
+import "../../styles/SingleCharacter.css";
+
 export const SingleCharacter = () => {
   const params = useParams();
   const [characteristics, setCharacteristics] = useState({});
@@ -25,22 +28,39 @@ export const SingleCharacter = () => {
   }, [params.uid]);
 
   return (
-    <>
-      <section>
+    <div className="single-view-container">
+      <section className="introduction-container">
         <img
           src={`https://starwars-visualguide.com/assets/img/characters/${character.uid}.jpg`}
           alt={`image of ${characteristics.name}`}
         ></img>
-        <p>{characteristics.name}</p> <p>{character.description}</p>
+        <div className="name-descp-container">
+          <h1>{characteristics.name}</h1>
+          <h2>{character.description}</h2>
+        </div>
       </section>
-      <section>
-        <p>{characteristics.name}</p>
-        <p>{characteristics.birth_year}</p>
-        <p>{characteristics.gender}</p>
-        <p>{characteristics.height}</p>
-        <p>{characteristics.skin_color}</p>
-        <p>{characteristics.eye_color}</p>
+      <section className="characteristics-container">
+        <div>
+          <h5>Birth year</h5>
+          <p>{characteristics.birth_year}</p>
+        </div>
+        <div>
+          <h5>Gender</h5>
+          <p>{characteristics.gender}</p>
+        </div>
+        <div>
+          <h5>Height</h5>
+          <p>{characteristics.height}</p>
+        </div>
+        <div>
+          <h5>Skin Color</h5>
+          <p>{characteristics.skin_color}</p>
+        </div>
+        <div>
+          <h5>Eye Color</h5>
+          <p>{characteristics.eye_color}</p>
+        </div>
       </section>
-    </>
+    </div>
   );
 };

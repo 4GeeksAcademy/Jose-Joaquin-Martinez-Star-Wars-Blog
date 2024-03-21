@@ -13,30 +13,32 @@ const CarouselCard = ({ element, type, handleFavElement }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="card-container card inline  border border-light">
+    <div className="card-container">
       <img
         src={
           type === "planets" && element.uid === "1"
-            ? "https://cdnb.artstation.com/p/marketplace/presentation_assets/000/692/587/large/file.jpg?1611445084"
+            ? "https://oyster.ignimgs.com/mediawiki/apis.ign.com/star-wars-episode-7/4/4b/Tatooine-3.jpg"
             : `https://starwars-visualguide.com/assets/img/${type}/${element.uid}.jpg`
         }
-        className="card-img-top"
+        className="card-img"
         alt={`image of ${type} ${element.name}`}
       ></img>
-      <div className="card-body">
-        <h5 className="card-title">{element.name}</h5>
-        <button
-          className="btn  text-light border border-light"
-          onClick={() => navigate(`/single/${type}/${element.uid}`)}
-        >
-          Learn more
-        </button>
-        <button
-          className="btn  text-dark border border-light"
-          onClick={() => handleFavElement(element, type)}
-        >
-          <FaRegStar />
-        </button>
+      <div className="body-card">
+        <h5 className="title-card">{element.name}</h5>
+        <div className="button-container">
+          <button
+            className="learn-btn"
+            onClick={() => navigate(`/single/${type}/${element.uid}`)}
+          >
+            Learn more
+          </button>
+          <button
+            className="fav-btn"
+            onClick={() => handleFavElement(element, type)}
+          >
+            <FaRegStar />
+          </button>
+        </div>
       </div>
     </div>
   );

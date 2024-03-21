@@ -19,17 +19,13 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className=" navbar  d-flex justify-content-around border-bottom border-light">
+    <nav className=" navbar ">
       <Link to="/">
-        <img
-          className="navbar-brand mb-0 w-25"
-          src={logoImg}
-          alt="star Wars logo"
-        />
+        <img className="navbar-brand w-25" src={logoImg} alt="star Wars logo" />
       </Link>
       <div className="dropdown">
         <button
-          className="btn btn-fav border border-light dropdown-toggle"
+          className="btn dropdown-fav-btn  dropdown-toggle"
           type="button"
           id="dropdownMenuButton1"
           data-bs-toggle="dropdown"
@@ -44,7 +40,7 @@ export const Navbar = () => {
         >
           {store.favItem.map((element) => {
             return (
-              <li className="text-light" key={element.uid}>
+              <li className="" key={element.uid}>
                 <span
                   onClick={() =>
                     navigate(`/single/${element.category}/${element.uid}`)

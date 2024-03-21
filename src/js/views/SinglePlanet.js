@@ -30,7 +30,7 @@ export const SinglePlanet = () => {
         <img
           src={
             planet.uid === "1"
-              ? "https://cdnb.artstation.com/p/marketplace/presentation_assets/000/692/587/large/file.jpg?1611445084"
+              ? "https://oyster.ignimgs.com/mediawiki/apis.ign.com/star-wars-episode-7/4/4b/Tatooine-3.jpg"
               : `https://starwars-visualguide.com/assets/img/planets/${planet.uid}.jpg`
           }
         ></img>

@@ -16,7 +16,7 @@ export const Home = () => {
 
   return (
     <>
-      <div className="carousel d-flex flex-nowrap  border overflow-auto">
+      <div className="carousel">
         {store.characters.map((element) => {
           return (
             <CarouselCard
@@ -28,7 +28,7 @@ export const Home = () => {
           );
         })}
       </div>
-      <div className="carousel d-flex flex-nowrap  border overflow-auto mt-5">
+      <div className="carousel">
         {store.planets.map((element) => {
           return (
             <CarouselCard
@@ -40,7 +40,7 @@ export const Home = () => {
           );
         })}
       </div>
-      <div className="carousel d-flex flex-nowrap  border overflow-auto">
+      <div className="carousel">
         {store.vehicles.map((element) => {
           return (
             <CarouselCard

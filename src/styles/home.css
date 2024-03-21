@@ -1,8 +1,8 @@
-body {
-  background-color: rgba(0, 0, 0, 0);
-  color: rgb(170, 170, 170);
-  font-family: Helvetica, sans-serif;
-}
 .carousel {
-  height: auto;
+  height: fit-content;
+  display: flex;
+  flex-wrap: nowrap;
+  border: 1px solid white;
+  overflow: auto;
+  margin-top: 10px;
 }

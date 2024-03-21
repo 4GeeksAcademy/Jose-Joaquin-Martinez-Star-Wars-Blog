@@ -1,7 +1,42 @@
 .card-container {
-  width: 18rem;
-  height: 20rem;
-  background-color: rgba(0, 0, 0, 0);
-  color: rgb(170, 170, 170);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  flex-wrap: nowrap;
+  background-color: black;
+  color: white;
+  width: 250px;
+  height: 300px;
+}
+img {
+  width: 100px;
+}
+
+.card-body {
+  background-color: balck;
+  color: white;
   font-family: Helvetica, sans-serif;
+}
+.button-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.learn-btn,
+.fav-btn {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+.learn-btn:hover,
+.fav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.733);
+  color: black;
+  transition: 0.2s;
+}
+
+.learn-btn:active,
+.fav-btn:active {
+  background-color: white;
 }

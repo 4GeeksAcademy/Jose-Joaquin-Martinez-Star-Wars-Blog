@@ -1,12 +1,12 @@
 .navbar {
   width: 100%;
-  position: fixed;
+  /* position: fixed; */
   display: flex;
   justify-content: space-around;
   align-items: center;
   border: 1px solid white;
   background-color: black;
-  z-index: 10;
+  z-index: 1;
   animation: enhancer-navbar linear both;
   animation-timeline: scroll(root);
   animation-range: 0 200px;
@@ -20,12 +20,13 @@
     opacity: 0.5;
   }
 }
-.btn-fav,
+.dropdown-fav-btn,
 .dropdown-menu {
   background-color: black;
   color: white;
+  border: 1px solid white;
 }
-.btn-fav:hover {
+.dropdown-fav-btn:hover {
   background-color: white;
   color: black;
   transition: 0.4s;
@@ -33,4 +34,13 @@
 
 li {
   cursor: pointer;
+  user-select: none;
+  border-radius: 2px;
+}
+li:hover {
+  background-color: rgba(255, 255, 255, 0.733);
+  color: black;
+}
+li:active {
+  background-color: white;
 }

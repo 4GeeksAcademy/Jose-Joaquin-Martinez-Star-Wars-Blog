@@ -2,9 +2,9 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
   border: 1px solid white;
   background-color: black;
-  z-index: 1;
   animation: enhancer-navbar linear both;
   animation-timeline: scroll(root);
   animation-range: 0 200px;

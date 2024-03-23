@@ -33,6 +33,7 @@ export const SingleCharacter = () => {
         <img
           src={`https://starwars-visualguide.com/assets/img/characters/${character.uid}.jpg`}
           alt={`image of ${characteristics.name}`}
+          className="single-img"
         ></img>
         <div className="name-descp-container">
           <h1>{characteristics.name}</h1>

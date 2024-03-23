@@ -16,7 +16,7 @@ export const Home = () => {
 
   return (
     <>
-      <div className="carousel">
+      <div className="carousel carousel-top d-flex flex-row flex-nowrap row-cols-1 row-cols-md-5 g-1 overflow-auto mb-3 ">
         {store.characters.map((element) => {
           return (
             <CarouselCard
@@ -28,7 +28,7 @@ export const Home = () => {
           );
         })}
       </div>
-      <div className="carousel">
+      <div className="carousel d-flex flex-row flex-nowrap row-cols-1 row-cols-md-5 g-2 overflow-auto mb-3 mt-3">
         {store.planets.map((element) => {
           return (
             <CarouselCard
@@ -40,7 +40,7 @@ export const Home = () => {
           );
         })}
       </div>
-      <div className="carousel">
+      <div className="carousel d-flex flex-row flex-nowrap row-cols-1 row-cols-md-5 g-2 overflow-auto mb-3 mt-3">
         {store.vehicles.map((element) => {
           return (
             <CarouselCard

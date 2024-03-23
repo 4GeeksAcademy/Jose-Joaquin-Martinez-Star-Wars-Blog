@@ -30,6 +30,7 @@ const Layout = () => {
             element={<h1>The force is not strong enough on YOU!</h1>}
           />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

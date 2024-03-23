@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
+//import style
+
 export const SinglePlanet = () => {
   const params = useParams();
   const [characteristics, setCharacteristics] = useState({});
@@ -26,11 +28,11 @@ export const SinglePlanet = () => {
 
   return (
     <>
-      <section>
+      <section className="img-single-view">
         <img
           src={
             planet.uid === "1"
-              ? "https://oyster.ignimgs.com/mediawiki/apis.ign.com/star-wars-episode-7/4/4b/Tatooine-3.jpg"
+              ? "https://i.pinimg.com/474x/9f/d0/02/9fd00203ccb2d3b53270623f7c5e8482.jpg"
               : `https://starwars-visualguide.com/assets/img/planets/${planet.uid}.jpg`
           }
         ></img>

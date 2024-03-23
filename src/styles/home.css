@@ -1,8 +1,9 @@
 .carousel {
-  height: fit-content;
-  display: flex;
-  flex-wrap: nowrap;
   border: 1px solid white;
-  overflow: auto;
-  margin-top: 10px;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.carousel-top {
+  margin-top: 120px;
 }

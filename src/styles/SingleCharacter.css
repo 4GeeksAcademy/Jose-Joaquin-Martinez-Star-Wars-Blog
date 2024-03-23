@@ -1,8 +1,14 @@
-.single-view-container {
-  margin-top: 10px;
-  background-color: black;
+:root {
+  --border-top: 1px solid rgba(255, 0, 0, 0.356);
 }
 
+.single-view-container {
+  margin-top: 100px;
+  background-color: black;
+}
+.img-single-view {
+  margin-top: 200px;
+}
 .introduction-container {
   display: flex;
   width: 100%;
@@ -18,7 +24,8 @@ img {
 .characteristics-container {
   display: flex;
   justify-content: space-around;
-  border-top: 1px solid rgba(255, 0, 0, 0.356);
+  margin-top: 20px;
+  border-top: var(--border-top);
 }
 h5 {
   color: white;

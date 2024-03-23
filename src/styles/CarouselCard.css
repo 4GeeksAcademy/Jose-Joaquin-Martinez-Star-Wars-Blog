@@ -5,11 +5,23 @@
   flex-wrap: nowrap;
   background-color: black;
   color: white;
-  width: 250px;
+  height: 419px;
+  width: 300px;
+  border-radius: 0 0 10px 10px;
+}
+.img-container {
+  width: 298px;
   height: 300px;
 }
-img {
-  width: 100px;
+.imgen-card {
+  object-fit: cover;
+  object-position: top;
+  height: 100%;
+}
+
+.imgen-vehicle {
+  object-fit: contain;
+  height: 100%;
 }
 
 .card-body {
@@ -17,6 +29,7 @@ img {
   color: white;
   font-family: Helvetica, sans-serif;
 }
+
 .button-container {
   display: flex;
   justify-content: space-around;
@@ -38,5 +51,9 @@ img {
 
 .learn-btn:active,
 .fav-btn:active {
+  background-color: white;
+}
+
+.star-icon:active {
   background-color: white;
 }

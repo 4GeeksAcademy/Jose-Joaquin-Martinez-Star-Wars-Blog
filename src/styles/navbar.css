@@ -1,9 +1,7 @@
 .navbar {
   width: 100%;
-  /* position: fixed; */
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
   border: 1px solid white;
   background-color: black;
   z-index: 1;
@@ -20,6 +18,27 @@
     opacity: 0.5;
   }
 }
+
+.navbar:hover {
+  animation: none;
+}
+.logo {
+  align-self: center;
+  margin-left: 50px;
+  width: 40%;
+  height: 100%;
+}
+@media screen and (max-width: 600px) {
+  .star-logo {
+    width: 80%;
+  }
+}
+.favorites {
+  align-self: center;
+  margin-right: 50px;
+  margin-left: 10px;
+}
+
 .dropdown-fav-btn,
 .dropdown-menu {
   background-color: black;
@@ -32,15 +51,15 @@
   transition: 0.4s;
 }
 
-li {
+.list-element {
   cursor: pointer;
   user-select: none;
   border-radius: 2px;
 }
-li:hover {
+.list-element:hover {
   background-color: rgba(255, 255, 255, 0.733);
   color: black;
 }
-li:active {
+.list-element:active {
   background-color: white;
 }

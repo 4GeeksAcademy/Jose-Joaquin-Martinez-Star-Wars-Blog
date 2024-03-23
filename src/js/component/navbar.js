@@ -19,11 +19,17 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className=" navbar ">
-      <Link to="/">
-        <img className="navbar-brand w-25" src={logoImg} alt="star Wars logo" />
-      </Link>
-      <div className="dropdown">
+    <nav className=" navbar fixed-top">
+      <div className="logo">
+        <Link to="/">
+          <img
+            className="navbar-brand star-logo"
+            src={logoImg}
+            alt="star Wars logo"
+          />
+        </Link>
+      </div>
+      <div className="dropdown favorites">
         <button
           className="btn dropdown-fav-btn  dropdown-toggle"
           type="button"
@@ -40,7 +46,7 @@ export const Navbar = () => {
         >
           {store.favItem.map((element) => {
             return (
-              <li className="" key={element.uid}>
+              <li className="list-element" key={element.uid}>
                 <span
                   onClick={() =>
                     navigate(`/single/${element.category}/${element.uid}`)

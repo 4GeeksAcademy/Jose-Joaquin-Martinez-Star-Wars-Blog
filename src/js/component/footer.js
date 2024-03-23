@@ -1,19 +1,26 @@
 import React, { Component } from "react";
 
+// import styles
+import "../../styles/footer.css";
+
+//import icons
+import { FaTiktok } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+
 export const Footer = () => (
-  <footer className="footer mt-auto py-3 text-center bg-dark">
-    {/* <ul>
-      <li className="other social-icon">
+  <footer className="footer star-foot mt-auto py-3 text-center">
+    <ul className="footer-list media-list">
+      <li className="tiktok social-icon">
         <a
           className="link aw-independent link_footer"
           href="https://www.tiktok.com/@starwars"
           target="_blank"
-        />
-        <img
-          src="https://lumiere-a.akamaihd.net/v1/images/tiktok-logo-white_dd1a4867.svg?region=0%2C0%2C150%2C150"
-          className="other-logo "
-          alt="TikTok"
-        />
+        >
+          <FaTiktok className="tiktok" />
+        </a>
       </li>
 
       <li class="instagram social-icon">
@@ -23,18 +30,18 @@ export const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span class="description">Instagram </span>
+          <FaInstagram className="instagram" />
         </a>
       </li>
 
-      <li class="twitter social-icon">
+      <li class="xtwitter social-icon">
         <a
           class="link aw-independent link_footer"
           href="https://twitter.com/starwars"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span class="description">Twitter </span>
+          <FaXTwitter className="xtwitter" />
         </a>
       </li>
       <li class="facebook social-icon">
@@ -44,7 +51,7 @@ export const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span class="description">Facebook </span>
+          <FaFacebook className="facebook" />
         </a>
       </li>
       <li class="youtube social-icon">
@@ -54,19 +61,9 @@ export const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span class="description">Youtube </span>
+          <FaYoutube className="youtube" />
         </a>
       </li>
-      <li class="kids social-icon">
-        <a
-          class="link aw-independent link_footer"
-          href="https://starwarskids.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="description">SWKids </span>
-        </a>
-      </li>
-    </ul> */}
+    </ul>
   </footer>
 );

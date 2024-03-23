@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 //import style
@@ -38,12 +38,11 @@ const CarouselCard = ({ element, type, handleFavElement }) => {
           >
             Learn more
           </button>
-          <button
-            className="fav-btn"
+
+          <FaRegStar
+            className="btn star-icon"
             onClick={() => handleFavElement(element, type)}
-          >
-            <FaRegStar className="star-icon" />
-          </button>
+          />
         </div>
       </div>
     </div>

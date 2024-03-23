@@ -32,6 +32,26 @@
   .star-logo {
     width: 80%;
   }
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    background-color: black;
+    animation: enhancer-navbar linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 200px;
+  }
+
+  @keyframes enhancer-navbar {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.5;
+    }
+  }
 }
 .favorites {
   align-self: center;

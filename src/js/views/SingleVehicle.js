@@ -33,7 +33,7 @@ export const SingleVehicle = () => {
         <p>{characteristics.name}</p> <p>{vehicle.description}</p>
       </section>
       <section>
-        <p>{characteristics.mode}</p>
+        <p>{characteristics.model}</p>
         <p>{characteristics.vehicle_class}</p>
         <p>{characteristics.manufacturer}</p>
         <p>{characteristics.cost_in_credits}</p>

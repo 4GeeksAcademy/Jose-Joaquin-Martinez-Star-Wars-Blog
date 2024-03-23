@@ -11,7 +11,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 
 export const Footer = () => (
-  <footer className="footer star-foot text-center fixed-bottom">
+  <footer className="footer star-foot text-center">
     <ul className="footer-list media-list">
       <li className="tiktok social-icon">
         <a
@@ -23,9 +23,9 @@ export const Footer = () => (
         </a>
       </li>
 
-      <li class="instagram social-icon">
+      <li className="instagram social-icon">
         <a
-          class="link aw-independent link_footer"
+          className="link aw-independent link_footer"
           href="https://www.instagram.com/starwars/"
           target="_blank"
           rel="noopener noreferrer"
@@ -34,9 +34,9 @@ export const Footer = () => (
         </a>
       </li>
 
-      <li class="xtwitter social-icon">
+      <li className="xtwitter social-icon">
         <a
-          class="link aw-independent link_footer"
+          className="link aw-independent link_footer"
           href="https://twitter.com/starwars"
           target="_blank"
           rel="noopener noreferrer"
@@ -44,9 +44,9 @@ export const Footer = () => (
           <FaXTwitter className="xtwitter" />
         </a>
       </li>
-      <li class="facebook social-icon">
+      <li className="facebook social-icon">
         <a
-          class="link aw-independent link_footer"
+          className="link aw-independent link_footer"
           href="https://www.facebook.com/StarWars"
           target="_blank"
           rel="noopener noreferrer"
@@ -54,9 +54,9 @@ export const Footer = () => (
           <FaFacebook className="facebook" />
         </a>
       </li>
-      <li class="youtube social-icon">
+      <li className="youtube social-icon">
         <a
-          class="link aw-independent link_footer"
+          className="link aw-independent link_footer"
           href="https://www.youtube.com/user/starwars"
           target="_blank"
           rel="noopener noreferrer"

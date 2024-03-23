@@ -2,10 +2,9 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { Home } from "./views/home";
-import { SingleCharacter } from "./views/SingleCharacter";
-import { SinglePlanet } from "./views/SinglePlanet";
-import { SingleVehicle } from "./views/SingleVehicle";
-import injectContext from "./store/appContext";
+import { SingleElement } from "./views/SingleElement";
+/* import { SinglePlanet } from "./views/SinglePlanet";
+import { SingleVehicle } from "./views/SingleVehicle" */ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -22,9 +21,9 @@ const Layout = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/single/characters/:uid" element={<SingleCharacter />} />
-          <Route path="/single/planets/:uid" element={<SinglePlanet />} />
-          <Route path="/single/vehicles/:uid" element={<SingleVehicle />} />
+          <Route path="/single/:type/:uid" element={<SingleElement />} />
+          {/* <Route path="/single/planets/:uid" element={<SinglePlanet />} />
+          <Route path="/single/vehicles/:uid" element={<SingleVehicle />} /> */}
           <Route
             path="*"
             element={<h1>The force is not strong enough on YOU!</h1>}

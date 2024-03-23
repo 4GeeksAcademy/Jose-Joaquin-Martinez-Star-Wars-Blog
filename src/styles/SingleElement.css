@@ -29,12 +29,18 @@ img {
 }
 
 h5 {
+  text-align: center;
   color: white;
   margin: 2px;
+  text-transform: capitalize;
 }
 h2,
 p {
   color: rgb(151, 19, 19);
+  text-transform: capitalize;
+}
+p {
+  text-align: center;
 }
 
 @media screen and (max-width: 600px) {

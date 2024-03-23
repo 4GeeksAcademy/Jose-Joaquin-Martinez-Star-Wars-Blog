@@ -40,7 +40,7 @@ export const Home = () => {
           );
         })}
       </div>
-      <div className="carousel d-flex flex-row flex-nowrap row-cols-1 row-cols-md-5 g-2 overflow-auto mb-3 mt-3">
+      <div className="carousel carousel-bottom d-flex flex-row flex-nowrap row-cols-1 row-cols-md-5 g-2 overflow-auto">
         {store.vehicles.map((element) => {
           return (
             <CarouselCard

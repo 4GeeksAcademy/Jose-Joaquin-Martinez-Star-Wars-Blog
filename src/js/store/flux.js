@@ -1,3 +1,5 @@
+import { element } from "prop-types";
+
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
@@ -5,6 +7,12 @@ const getState = ({ getStore, getActions, setStore }) => {
       characters: JSON.parse(localStorage.getItem("characters")) || [],
       planets: JSON.parse(localStorage.getItem("planets")) || [],
       vehicles: JSON.parse(localStorage.getItem("vehicles")) || [],
+      alltogether: [
+        ...(JSON.parse(localStorage.getItem("characters")) || []),
+        ...(JSON.parse(localStorage.getItem("planets")) || []),
+        ...(JSON.parse(localStorage.getItem("vehicles")) || []),
+        ...(JSON.parse(localStorage.getItem("favItems")) || []),
+      ],
     },
     actions: {
       getCharacters: async () => {

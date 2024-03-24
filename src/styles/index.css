@@ -4,6 +4,7 @@
 body {
   background-color: black;
   font-family: Helvetica, sans-serif;
+  background-image: url("http://lukedowding.com/img/space.jpg");
 }
 ::-webkit-scrollbar {
   width: 10px;

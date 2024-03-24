@@ -11,6 +11,8 @@ export const SingleElement = () => {
 
   const getIndividualcharacteristics = async () => {
     try {
+      console.log(params.type);
+      console.log(params.uid);
       if (params.type === "characters") {
         const response = await fetch(
           `https://www.swapi.tech/api/people/${params.uid}`
@@ -31,7 +33,7 @@ export const SingleElement = () => {
         }
       }
     } catch (error) {
-      console.log(error);
+      console.log("Error loading data", error);
     }
   };
   useEffect(() => {

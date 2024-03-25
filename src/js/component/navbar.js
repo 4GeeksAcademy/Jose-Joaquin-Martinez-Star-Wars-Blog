@@ -101,10 +101,11 @@ export const Navbar = () => {
             onClick={() => {
               console.log(selectedElement);
               navigate(
-                selectElement
-                  ? `single/${selectElement.type}/${selectElement.uid}`
+                selectedElement
+                  ? `single/${selectedElement.type}/${selectedElement.uid}`
                   : "/"
               );
+              setValue("");
             }}
           >
             Search

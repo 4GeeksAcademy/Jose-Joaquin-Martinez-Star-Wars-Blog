@@ -11,8 +11,6 @@ export const SingleElement = () => {
 
   const getIndividualcharacteristics = async () => {
     try {
-      console.log(params.type);
-      console.log(params.uid);
       if (params.type === "characters") {
         const response = await fetch(
           `https://www.swapi.tech/api/people/${params.uid}`

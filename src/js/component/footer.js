@@ -11,7 +11,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 
 export const Footer = () => (
-  <footer className="footer star-foot text-center">
+  <footer className="footer star-foot text-center pb-1 pt-1">
     <ul className="footer-list media-list">
       <li className="tiktok social-icon">
         <a

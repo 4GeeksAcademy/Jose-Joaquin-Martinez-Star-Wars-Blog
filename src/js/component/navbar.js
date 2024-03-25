@@ -17,7 +17,7 @@ export const Navbar = () => {
   const navigate = useNavigate();
   const [elements, setElements] = useState(store.alltogether);
   const [value, setValue] = useState("");
-  const [selectedElement, SetSelectedElement] = useState({});
+  const [selectedElement, SetSelectedElement] = useState(null);
 
   const handleDropdownClick = (e) => {
     e.stopPropagation();
@@ -99,53 +99,54 @@ export const Navbar = () => {
           <button
             className="search-btn ms-1"
             onClick={() => {
-              console.log(selectedElement);
-              navigate(
-                selectedElement
-                  ? `single/${selectedElement.type}/${selectedElement.uid}`
-                  : "/"
-              );
-              setValue("");
+              if (!selectedElement === null) {
+                navigate(
+                  `single/${selectedElement.type}/${selectedElement.uid}`
+                );
+                setValue("");
+              }
             }}
           >
             Search
           </button>
         </div>
-        <button
-          className="btn dropdown-fav-btn  dropdown-toggle"
-          type="button"
-          id="dropdownMenuButton1"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Favorites
-        </button>
-        <ul
-          className="dropdown-menu"
-          aria-labelledby="dropdownMenuButton1"
-          onClick={handleDropdownClick}
-          style={{
-            display: !store.favItem.length > 0 && "none",
-          }}
-        >
-          {store.favItem.map((element) => {
-            return (
-              <li className="list-element" key={element.uid}>
-                <span
-                  onClick={() =>
-                    navigate(`/single/${element.category}/${element.uid}`)
-                  }
-                >
-                  {element.name}
-                </span>
-                <FaRegTrashAlt
-                  className="ms-1"
-                  onClick={() => actions.deleteFromFavorites(element)}
-                />
-              </li>
-            );
-          })}
-        </ul>
+        <div>
+          <button
+            className="btn dropdown-fav-btn  dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Favorites
+          </button>
+          <ul
+            className="dropdown-menu fav--list__ul"
+            aria-labelledby="dropdownMenuButton1"
+            onClick={handleDropdownClick}
+            style={{
+              display: !store.favItem.length > 0 && "none",
+            }}
+          >
+            {store.favItem.map((element) => {
+              return (
+                <li className="list-element" key={element.uid}>
+                  <span
+                    onClick={() =>
+                      navigate(`/single/${element.category}/${element.uid}`)
+                    }
+                  >
+                    {element.name}
+                  </span>
+                  <FaRegTrashAlt
+                    className="ms-1"
+                    onClick={() => actions.deleteFromFavorites(element)}
+                  />
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </nav>
   );

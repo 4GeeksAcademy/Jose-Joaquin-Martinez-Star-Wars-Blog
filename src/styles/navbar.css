@@ -3,7 +3,6 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  border: 1px solid white;
   background-color: black;
   animation: enhancer-navbar linear both;
   animation-timeline: scroll(root);
@@ -29,32 +28,12 @@
   width: 40%;
   height: 100%;
 }
-@media screen and (max-width: 600px) {
-  .star-logo {
-    width: 80%;
-  }
-  .navbar {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    border: 1px solid white;
-    background-color: black;
-    animation: enhancer-navbar linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 200px;
-    background-image: url("http://lukedowding.com/img/space.jpg");
-  }
 
-  @keyframes enhancer-navbar {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0.5;
-    }
-  }
+.fav--list__ul {
+  right: 0;
+  left: none;
 }
+
 .favorites {
   align-self: center;
   margin-right: 50px;
@@ -68,7 +47,7 @@
 .dropdown-menu,
 .search-btn {
   background-color: black;
-  color: white;
+  color: rgb(255, 255, 255);
   border: 1px solid white;
   border-radius: 5px;
 }
@@ -83,6 +62,7 @@
   cursor: pointer;
   user-select: none;
   border-radius: 2px;
+  padding-left: 10px;
 }
 .list-element:hover {
   color: white;
@@ -112,4 +92,35 @@
   margin-left: auto;
   margin-right: auto;
   list-style: none;
+}
+
+@media screen and (max-width: 600px) {
+  .star-logo {
+    width: 80%;
+  }
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: black;
+    animation: enhancer-navbar linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 200px;
+    background-image: url("http://lukedowding.com/img/space.jpg");
+  }
+
+  @keyframes enhancer-navbar {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.5;
+    }
+  }
+
+  .fav--list__ul {
+    right: 13px;
+    left: none;
+  }
 }

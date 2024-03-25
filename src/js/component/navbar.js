@@ -124,6 +124,9 @@ export const Navbar = () => {
           className="dropdown-menu"
           aria-labelledby="dropdownMenuButton1"
           onClick={handleDropdownClick}
+          style={{
+            display: !store.favItem.length > 0 && "none",
+          }}
         >
           {store.favItem.map((element) => {
             return (

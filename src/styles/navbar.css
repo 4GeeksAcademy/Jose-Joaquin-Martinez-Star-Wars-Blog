@@ -8,6 +8,7 @@
   animation: enhancer-navbar linear both;
   animation-timeline: scroll(root);
   animation-range: 0 200px;
+  background-image: url("http://lukedowding.com/img/space.jpg");
 }
 
 @keyframes enhancer-navbar {
@@ -42,6 +43,7 @@
     animation: enhancer-navbar linear both;
     animation-timeline: scroll(root);
     animation-range: 0 200px;
+    background-image: url("http://lukedowding.com/img/space.jpg");
   }
 
   @keyframes enhancer-navbar {
@@ -83,11 +85,11 @@
   border-radius: 2px;
 }
 .list-element:hover {
-  background-color: rgba(255, 255, 255, 0.733);
-  color: black;
+  color: white;
 }
 .list-element:active {
   background-color: white;
+  color: black;
 }
 .react-autosuggest__suggestions-container--open {
   display: block;

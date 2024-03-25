@@ -8,6 +8,7 @@
   height: 419px;
   width: 300px;
   border-radius: 0 0 10px 10px;
+  background-image: url("http://lukedowding.com/img/space.jpg");
 }
 
 @media screen and (max-width: 600px) {
@@ -41,7 +42,6 @@
 }
 
 .card-body {
-  background-color: balck;
   color: white;
   font-family: Helvetica, sans-serif;
 }

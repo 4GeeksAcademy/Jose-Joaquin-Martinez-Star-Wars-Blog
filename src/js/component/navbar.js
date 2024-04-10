@@ -99,7 +99,7 @@ export const Navbar = () => {
           <button
             className="search-btn ms-1"
             onClick={() => {
-              if (!selectedElement === null) {
+              if (selectedElement !== null) {
                 navigate(
                   `single/${selectedElement.type}/${selectedElement.uid}`
                 );

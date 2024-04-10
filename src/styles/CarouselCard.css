@@ -52,7 +52,7 @@
 }
 
 .learn-btn {
-  background-color: black;
+  background-color: transparent;
   color: white;
   border: none;
 }
@@ -69,6 +69,8 @@
 }
 .star-icon {
   align-self: center;
+  background-color: transparent;
+  border-radius: 50%;
   font-size: 3rem;
   color: white;
 }

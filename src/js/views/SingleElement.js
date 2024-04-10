@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { URL } from "../store/consts";
 
 //import style
 import "../../styles/SingleElement.css";
@@ -12,18 +13,14 @@ export const SingleElement = () => {
   const getIndividualcharacteristics = async () => {
     try {
       if (params.type === "characters") {
-        const response = await fetch(
-          `https://www.swapi.tech/api/people/${params.uid}`
-        );
+        const response = await fetch(URL + `/people/${params.uid}`);
         const data = await response.json();
         if (response.ok) {
           setElement(data.result);
           setCharacteristics(data.result.properties);
         }
       } else {
-        const response = await fetch(
-          `https://www.swapi.tech/api/${params.type}/${params.uid}`
-        );
+        const response = await fetch(URL + `/${params.type}/${params.uid}`);
         const data = await response.json();
         if (response.ok) {
           setElement(data.result);

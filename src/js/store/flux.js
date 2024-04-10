@@ -1,4 +1,4 @@
-import { element } from "prop-types";
+import { URL } from "../store/consts";
 
 const getState = ({ getStore, getActions, setStore }) => {
   return {
@@ -19,7 +19,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         const store = getStore();
         try {
           if (store.characters.length === 0) {
-            const response = await fetch("https://www.swapi.tech/api/people/");
+            const response = await fetch(URL + "/people/");
             if (!response.ok) {
               throw new Error("Error al obtener los personajes de la API");
             }
@@ -38,7 +38,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         const store = getStore();
         try {
           if (store.planets.length === 0) {
-            const response = await fetch("https://www.swapi.tech/api/planets/");
+            const response = await fetch(URL + "/planets/");
             if (!response.ok) {
               throw new Error("Error al obtener los planetas de la API");
             }
@@ -57,9 +57,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         const store = getStore();
         try {
           if (store.vehicles.length === 0) {
-            const response = await fetch(
-              "https://www.swapi.tech/api/vehicles/"
-            );
+            const response = await fetch(URL + "/vehicles/");
             if (!response.ok) {
               throw new Error("Error al obtener los vehiculos de la API");
             }
